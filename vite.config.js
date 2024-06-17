@@ -6,5 +6,6 @@ export default defineConfig({
   build: {
     outDir: 'dist'
   },
+  base: '/swathi_digital_photos/', // Ensure the base path is set to your repository name
   assetsInclude: ['**/*.JPG', '**/*.jpg']
 })
