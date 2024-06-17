@@ -1,0 +1,262 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  .container {
+    position: static;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .first_letter::before {
+    content: "_";
+    /* Add a dash before the first letter */
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .first_letter {
+    position: relative;
+    color: #ff0000;
+    font-weight: bold;
+  }
+  
+  .service_para {
+    font-weight: bold;
+    animation: slideIn 1s ease forwards;
+  }
+  
+  .prev,
+  .next {
+    position: absolute;
+    transform: translateY(-50%);
+    padding: 10px;
+    background-color: #ffffff80;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  
+  .gallery img:hover {
+    transform: scale(1.05);
+  }
+  
+  .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000cc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 10px;
+  }
+  
+  .modal button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #ffffffb0;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal button:hover {
+    background-color: #cccccc;
+  }
+  
+  .home_page {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid #4caf50; /* Green border */
+    color: #4caf50; /* Green text */
+    background-color: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .home_page:hover {
+    background-color: #4caf50; /* Green background */
+    color: #ffffff; /* White text */
+  }
+  
+  .home_page:focus {
+    outline: none; /* Remove default focus outline */
+  }
+  
+  .home_page:active {
+    transform: translateY(1px); /* Add slight click effect */
+  }
+  
+  @media (min-width: 250px) and (max-width: 449px) {
+    .service_para {
+      font-size: 20px;
+      padding: 30px;
+    }
+    .first_letter {
+      font-size: 22px;
+    }
+  }
+  
+  @media (min-width: 250px) and (max-width: 559px) {
+    .prev {
+      top: 50%;
+      left: 0;
+    }
+  
+    .next {
+      top: 50%;
+      right: 0;
+    }
+  
+    .close {
+      top: 35%;
+      right: 5%;
+    }
+  }
+  
+  @media (min-width: 560px) and (max-width: 869px) {
+    .prev {
+      top: 50%;
+      left: 0;
+    }
+  
+    .next {
+      top: 50%;
+      right: 0;
+    }
+  
+    .close {
+      top: 28%;
+      right: 5%;
+    }
+  }
+  
+  @media (min-width: 869px) and (max-width: 2000px) {
+    .prev {
+      top: 50%;
+      left: 10%;
+    }
+  
+    .next {
+      top: 50%;
+      right: 10%;
+    }
+  
+    .close {
+      top: 12%;
+      right: 12%;
+    }
+  }
+  
+  @media (min-width: 450px) and (max-width: 2000px) {
+    .service_para {
+      padding: 50px;
+      font-size: 35px;
+    }
+    .first_letter {
+      font-size: 37px;
+    }
+  }
+  
+  @media (min-width: 250px) and (max-width: 1299px) {
+    .first_three {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .second_three {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .third_three {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (min-width: 1300px) and (max-width: 2000px) {
+    .first_three {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .second_three {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+    .third_three {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+  
+  .wedding_service {
+    text-align: center;
+    /* background-color: aqua; */
+    padding: 20px;
+  }
+  
+  /* .wedding_service  */
+  IFrame {
+    width: 90%;
+    height: 700px;
+    border: none;
+  }
+  

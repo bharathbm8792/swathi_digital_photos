@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    /* position: relative; */
+    position: static;
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons_box {
+    font-weight: bold;
+    font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttons button {
+    /* background-color: #ffffff; */
+    border: none;
+    margin: 15px;
+    width: 200px;
+    height: 150px;
+    box-shadow: 1px 2px 3px 0px;
+    border-radius: 10px;
+    transition: transform ease-in-out 100ms;
+}
+
+.buttons button:hover {
+    transform: translateY(-10px);
+}
+
+.button_bkgnd_blue button,
+.button_bkgnd_orange button{
+    box-shadow: 1px 2px 3px 0px;
+}
+
+.button_bkgnd_blue button {
+    background-image: linear-gradient(to bottom, #adf3fc, #4ec4f7);
+    color: #ffffff;
+    font-size: 25px
+}
+
+.button_bkgnd_blue p:hover,
+.button_bkgnd_orange p:hover {
+    color: #000000;
+}
+
+.button_bkgnd_white p:hover {
+    color: #fa9638;
+}
+
+.button_bkgnd_orange button {
+    background-image: linear-gradient(to bottom, #f6bca0, #fa9638);
+    color: #ffffff;
+    font-size: 25px
+}
+
+.button_bkgnd_white button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 23px;
+}
+
+.button_flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.button_flex p {
+    font-size: 23px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+
+.button_flex img {
+    width: 64px;
+    height: 64px;
+}
+
+.first_letter::before {
+    content: '_';
+    /* Add a dash before the first letter */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.first_letter {
+    position: relative;
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.service_para {
+    animation: slideIn 1s ease forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@media (min-width : 270px) and (max-width : 600px) {
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .service_para {
+        font-size: 20px;
+        padding: 30px;
+    }
+
+    .first_letter {
+        font-size: 22px;
+    }
+
+}
+
+@media (min-width : 601px) and (max-width : 2500px) {
+    .buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .service_para {
+        padding: 50px;
+        font-size: 35px;
+    }
+
+    .first_letter {
+        font-size: 37px;
+    }
+}
