@@ -1,4 +1,5 @@
 import { ImWhatsapp } from "react-icons/im";
+import { IoLogoWhatsapp } from "react-icons/io";
 
 import style from "./createWhatsAppLink.module.css";
 
@@ -15,8 +16,9 @@ export default function WhatsAppDMLink() {
     <div className={style.container}>
       <a href={createWhatsAppLink()} target="_blank" rel="noopener noreferrer">
         <div className={style.WALINK}>
-          <ImWhatsapp size={50} className={style.icon} />
-          <span>WhatsApp Us</span>
+          <ImWhatsapp size={40} className={style.icon} />
+          {/* <IoLogoWhatsapp size={50} className={style.newicon}/> */}
+          {/* <span>Contact us</span> */}
         </div>
       </a>
     </div>

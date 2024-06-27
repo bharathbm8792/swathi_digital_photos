@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.loadingImage {
+  width: 200px;
+  height: 200px;
+}
+
+.Loading_text {
+  font-size: 25px;
+  font-weight: bold;
+}

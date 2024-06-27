@@ -135,7 +135,7 @@
 
 }
 
-@media (min-width : 601px) and (max-width : 2500px) {
+@media (min-width : 601px) and (max-width : 2800px) {
     .buttons {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;

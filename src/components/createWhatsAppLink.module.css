@@ -5,11 +5,15 @@
 }
 
 .container {
-  width: 100%;
-  height: max-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: fixed;
+  bottom: 45px;
+  right: 20px;
+  z-index: 1000;
+  /* background-color: white; */
+  background-color: #000;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .icon {
@@ -24,6 +28,7 @@
 
 .container span {
   padding: 10px;
+  font-weight: bold;
 }
 
 .WALINK {
@@ -39,5 +44,9 @@
 
 .container span:hover,
 .icon:hover {
+  color: #08a408;
+}
+
+.newicon{
   color: #08a408;
 }

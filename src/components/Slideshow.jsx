@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import style from "./Slideshow.module.css";
 
 import first from "/src/images/slideshow/meragi.celebrations-20240408-0001.jpg";
-import second from "/src/images/slideshow/meragi.celebrations-20240408-0001.jpg";
+import second from "/src/images/slideshow/meragi.celebrations-20240408-0002.jpg";
 import third from "/src/images/slideshow/meragi.celebrations-20240408-0003.jpg";
 import fourth from "/src/images/slideshow/meragi.celebrations-20240408-0004.jpg";
 import fifth from "/src/images/slideshow/meragi.celebrations-20240408-0005.jpg";
@@ -10,12 +10,24 @@ import sixth from "/src/images/slideshow/meragi.celebrations-20240408-0006.jpg";
 import seventh from "/src/images/slideshow/meragi.celebrations-20240408-0007.jpg";
 import eighth from "/src/images/slideshow/meragi.celebrations-20240408-0008.jpg";
 import ninth from "/src/images/slideshow/meragi.celebrations-20240408-0009.jpg";
+import Pic10 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/home_warming/05.jpg";
+import Pic11 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/02.jpg";
+import Pic12 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/32.jpg";
+import Pic13 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/33.jpg";
+import Pic14 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/pre_wedding_service/003.jpg";
+import Pic15 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/pre_wedding_service/035.jpg";
 
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 
 export default function Slideshow() {
   const images = [
+    Pic11,
+    Pic12,
+    Pic13,
+    Pic10,
+    Pic14,
+    Pic15,
     first,
     second,
     third,
@@ -48,7 +60,7 @@ export default function Slideshow() {
   return (
     <div className={style.container}>
       <p className={style.service_para}>
-        <span className={style.first_letter}>S</span>LIDESHOW
+        <span className={style.first_letter}>O</span>UR WORKS
       </p>
       <div className={style.slideshow}>
         <img

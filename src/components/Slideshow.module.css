@@ -6,6 +6,7 @@
 
 .container {
   text-align: center;
+  /* position: relative; */
 }
 
 .service_para {
@@ -38,6 +39,7 @@
 
 .slideshow img {
   width: 100%;
+  /* width: 98%; */
   height: auto;
   opacity: 1;
   /* transition: opacity 0.5s ease-in-out; */

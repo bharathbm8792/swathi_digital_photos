@@ -1,62 +1,164 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .container {
-    /* position: sticky; */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  transition: background-color 0.3s ease;
+  z-index: 3;
 }
-
-
 
 .container.scrolled {
-    background-color: #ffffff;
+  background-color: #ffffff;
 }
 
-.container.scrolled button {
+.hamburger {
+  background: none;
+  border: none;
+  color: inherit; /* Inherit color to change with scroll */
+  cursor: pointer;
+}
+
+.icon {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.icon_scrolled {
+  color: #000;
+}
+
+.icon_box {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: transparent;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: color 0.3s ease;
+}
+
+.icon_box_scrolled {
+  color: #000;
+}
+
+.navbar {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 95%;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar li {
+  margin: 10px 0;
+}
+
+.navbar button,
+.navbar a {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  border: none;
+  background-color: transparent;
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar button:hover,
+.navbar a:hover {
+  color: #ffa500;
+}
+
+@media (min-width: 260px) and (max-width: 399px) {
+  .container {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .icon_box {
+    font-size: 18px;
+  }
+
+  .navbar {
+    top: 50px;
+    right: 10px;
+    background-color: #aaa7a7;
+  }
+
+  .navbar button,
+  .navbar a {
+    font-size: 14px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    padding: 2px;
     color: #000;
+  }
 }
 
-.container button:hover {
-    color: orange;
+@media (min-width: 400px) and (max-width: 600px) {
+  .container {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .icon_box {
+    font-size: 18px;
+  }
+
+  .navbar {
+    top: 50px;
+    right: 10px;
+    background-color: #aaa7a7;
+  }
+
+  .navbar button,
+  .navbar a {
+    font-size: 17px;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+    padding: 3px;
+    color: #000;
+  }
 }
 
-@media (min-width: 270px) and (max-width: 600px) {
-    .container {
-        justify-content: space-between;
-        padding: 10px;
-    }
+@media (min-width: 601px) and (max-width: 2800px) {
+  .container {
+    padding: 10px 50px;
+  }
 
-    .container button,
-    .container a {
-        font-weight: bold;
-        border: none;
-        background-color: transparent;
-        font-size: 9px;
-        color: #ffffff;
-        padding: 3px;
-    }
-}
+  .icon_box {
+    font-size: 24px;
+  }
 
-@media (min-width: 601px) and (max-width: 2500px) {
-    .container {
-        justify-content: center;
-    }
+  .navbar {
+    top: 60px;
+    right: 50px;
+  }
 
-    .container button,
-    .container a {
-        font-weight: bold;
-        border: none;
-        background-color: transparent;
-        font-size: 18px;
-        color: #ffffff;
-        padding: 10px;
-    }
+  .navbar button,
+  .navbar a {
+    font-size: 18px;
+    padding: 10px;
+  }
 }

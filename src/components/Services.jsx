@@ -19,11 +19,14 @@ import Pre_wedding from "/src/images/icons/Elements-pre-wedding.png";
 import Approved from "/src/images/icons/approved.png";
 import Spinny from "/src/images/icons/spinny_booth.jpeg";
 
-export default function Services() {
+import React from "react";
+
+// export default function Services() {
+const Services = React.forwardRef((props, ref) => {
   const navigateTo = useNavigate();
 
   return (
-    <div className={style.container}>
+    <div className={style.container} ref={ref}>
       <div className={style.buttons_box}>
         <p className={style.service_para}>
           <span className={style.first_letter}>S</span>
@@ -42,7 +45,7 @@ export default function Services() {
               </div>
             </button>
           </div>
-          
+
           <div className={style.button_bkgnd_white}>
             <button
               onClick={() => {
@@ -83,7 +86,7 @@ export default function Services() {
               </div>
             </button>
           </div> */}
-         <div className={style.button_bkgnd_blue}>
+          <div className={style.button_bkgnd_blue}>
             <button
               onClick={() => {
                 navigateTo("/birthday");
@@ -119,8 +122,7 @@ export default function Services() {
               </div>
             </button>
           </div>
-          
-          
+
           <div className={style.button_bkgnd_blue}>
             <button
               onClick={() => {
@@ -141,7 +143,7 @@ export default function Services() {
               </div>
             </button>
           </div> */}
-         
+
           <div className={style.button_bkgnd_white}>
             <button
               onClick={() => {
@@ -170,7 +172,7 @@ export default function Services() {
               </div>
             </button>
           </div> */}
-         
+
           <div className={style.button_bkgnd_orange}>
             <button
               onClick={() => {
@@ -219,4 +221,7 @@ export default function Services() {
       </div>
     </div>
   );
-}
+  // }
+});
+
+export default Services;

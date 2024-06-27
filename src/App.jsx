@@ -9,6 +9,7 @@ import Home from "./components/Home.jsx";
 import Contact from "./components/Contact.jsx";
 import Login from "./components/Login.jsx";
 import Private from "./components/Private.jsx";
+import Loading from "./components/Loading.jsx";
 
 // Lazy loading for other components
 const WeddingService = lazy(() => import("./components/Wedding_service.jsx"));
@@ -60,7 +61,7 @@ function App() {
         <Route
           path="/wedding_service"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <WeddingService />
             </Suspense>
           }
@@ -68,7 +69,7 @@ function App() {
         <Route
           path="/pre_wedding_service"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <PreWedding />
             </Suspense>
           }
@@ -76,7 +77,7 @@ function App() {
         <Route
           path="/engagement_service"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <Engagement />
             </Suspense>
           }
@@ -84,7 +85,7 @@ function App() {
         <Route
           path="/corporate_events"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <CorporateEvents />
             </Suspense>
           }
@@ -92,7 +93,7 @@ function App() {
         <Route
           path="/school_events"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <SchoolEvents />
             </Suspense>
           }
@@ -100,7 +101,7 @@ function App() {
         <Route
           path="/naac_approval"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <NaacApproval />
             </Suspense>
           }
@@ -108,7 +109,7 @@ function App() {
         <Route
           path="/birthday"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <Birthday />
             </Suspense>
           }
@@ -116,7 +117,7 @@ function App() {
         <Route
           path="/house_warming"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <HouseWarming />
             </Suspense>
           }
@@ -124,7 +125,7 @@ function App() {
         <Route
           path="/candid_wedding"
           element={
-            <Suspense fallback={<div>Loading...</div>}>
+            <Suspense fallback={<Loading />}>
               <CandidWedding />
             </Suspense>
           }

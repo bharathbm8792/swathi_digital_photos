@@ -10,14 +10,29 @@ import sixth from "/src/images/slideshow/meragi.celebrations-20240408-0006.jpg";
 import seventh from "/src/images/slideshow/meragi.celebrations-20240408-0007.jpg";
 import eighth from "/src/images/slideshow/meragi.celebrations-20240408-0008.jpg";
 import ninth from "/src/images/slideshow/meragi.celebrations-20240408-0009.jpg";
+import Pic10 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/04.jpg";
+import Pic11 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/12.jpg";
+import Pic12 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/15.jpg";
+import Pic13 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/22.jpg";
+import Pic14 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/37.jpg";
+import Pic15 from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/candid_wedding/02.jpg";
 
 import { GrPrevious } from "react-icons/gr";
 import { GrNext } from "react-icons/gr";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 
-export default function Gallery() {
+import React from "react";
+
+// export default function Gallery() {
+const Gallery = React.forwardRef((props, ref) => {
   const [selectedImage, setSelectedImage] = useState(null);
   const images = [
+    Pic10,
+    Pic11,
+    Pic12,
+    Pic13,
+    Pic14,
+    Pic15,
     first,
     second,
     third,
@@ -50,7 +65,7 @@ export default function Gallery() {
   };
 
   return (
-    <div className={style.container}>
+    <div className={style.container} ref={ref}>
       <p className={style.service_para}>
         <span className={style.first_letter}>G</span>ALLERY
       </p>
@@ -71,8 +86,8 @@ export default function Gallery() {
             <GrPrevious />
           </button>
           <button onClick={closeImage} className={style.close}>
-            <div >
-            <IoIosCloseCircleOutline size={25} />
+            <div>
+              <IoIosCloseCircleOutline size={25} />
             </div>
           </button>
           <button onClick={nextImage} className={style.next}>
@@ -82,7 +97,10 @@ export default function Gallery() {
       )}
     </div>
   );
-}
+  // }
+});
+
+export default Gallery;
 
 // import style from './Gallery.module.css';
 

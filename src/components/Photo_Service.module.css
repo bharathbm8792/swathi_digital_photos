@@ -186,7 +186,7 @@
   }
 }
 
-@media (min-width: 869px) and (max-width: 2500px) {
+@media (min-width: 869px) and (max-width: 2800px) {
   .prev {
     top: 50%;
     left: 10%;
@@ -203,7 +203,7 @@
   }
 }
 
-@media (min-width: 450px) and (max-width: 2500px) {
+@media (min-width: 450px) and (max-width: 2800px) {
   .service_para {
     padding: 50px;
     font-size: 35px;
@@ -232,7 +232,7 @@
   }
 }
 
-@media (min-width: 1300px) and (max-width: 2500px) {
+@media (min-width: 1300px) and (max-width: 2800px) {
   .first_three {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
