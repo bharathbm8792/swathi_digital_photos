@@ -6,7 +6,7 @@ export default function Footer() {
 
   return (
     <div className={style.container}>
-      <p>&copy; Copyright 2024. All Rights are Reserved.</p>
+      <p>&copy; Copyright 2026. All Rights are Reserved.</p>
       {/* Login page still not developed */}
       {/* <button
         onClick={() => {

@@ -6,6 +6,7 @@ import Pre_wed from "/src/images/icons/prewed.png";
 import Engagement from "/src/images/icons/prewedding.png";
 import Birthday from "/src/images/icons/birthday.png";
 import Corporate from "/src/images/icons/corporate.png";
+import Product from "/src/images/icons/box.png"
 import Upanayana from "/src/images/icons/upanayanam.png";
 import House from "/src/images/icons/house.png";
 import Portfolio from "/src/images/icons/model.png";
@@ -172,8 +173,19 @@ const Services = React.forwardRef((props, ref) => {
               </div>
             </button>
           </div> */}
-
           <div className={style.button_bkgnd_orange}>
+            <button
+              onClick={() => {
+                navigateTo("/product_shoot");
+              }}
+            >
+              <div className={style.button_flex}>
+                <img src={Product} alt="School events" />
+                <p>Product Shoot</p>
+              </div>
+            </button>
+          </div>
+          <div className={style.button_bkgnd_blue}>
             <button
               onClick={() => {
                 navigateTo("/naac_approval");
@@ -185,6 +197,7 @@ const Services = React.forwardRef((props, ref) => {
               </div>
             </button>
           </div>
+
           {/* <div className={style.button_bkgnd_orange}>
             <button>
               <div className={style.button_flex}>

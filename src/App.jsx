@@ -21,6 +21,7 @@ const NaacApproval = lazy(() => import("./components/Naac_approval.jsx"));
 const Birthday = lazy(() => import("./components/Birthday.jsx"));
 const HouseWarming = lazy(() => import("./components/House_warming.jsx"));
 const CandidWedding = lazy(() => import("./components/Candid_wedding.jsx"));
+const ProductShoot = lazy(() => import("./components/ProductShoot.jsx"));
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -127,6 +128,14 @@ function App() {
           element={
             <Suspense fallback={<Loading />}>
               <CandidWedding />
+            </Suspense>
+          }
+        />
+        <Route
+          path="/product_shoot"
+          element={
+            <Suspense fallback={<Loading />}>
+              <ProductShoot />
             </Suspense>
           }
         />

@@ -1,7 +1,7 @@
 import React from "react";
 import style from "./Loading.module.css";
-//import Loading_gif from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/icons/Loading.gif";
-import Loading_gif from "../images/icons/Loading.gif";
+import Loading_gif from "/home/bharathbm/practice/React/swathi-digital-photos/src/images/icons/Loading.gif";
+//import Loading_gif from "../images/icons/Loading.gif";
 
 export default function Loading() {
   return (
